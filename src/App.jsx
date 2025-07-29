@@ -1,5 +1,5 @@
 import styles from './style'
-import { Navbar , Hero , Stats , Billing , CardDeal , Clients , CTA , Footer  , Business} from './components';
+import { Navbar , Hero , Stats , Billing , CardDeal , Testimonials , CTA , Footer  , Business} from './components';
 
 const App = () => {
   return (
@@ -47,10 +47,10 @@ const App = () => {
         </div>
       </div>
 
-      {/* Clients Section */}
+      {/* Testimonials Section */}
       <div className={`bg-primary ${styles.paddingX} ${styles.flexStart}`}>
         <div className={`${styles.boxWidth}`}>
-          <Clients />
+          <Testimonials />
         </div>
       </div>
 
