@@ -174,3 +174,106 @@
     initial-value: 0deg;
   }
 }
+
+/* Rainbow hover effect for navbar links - ENHANCED VERSION */
+.rainbow-hover {
+  position: relative;
+  isolation: isolate;
+}
+
+.rainbow-hover::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 2px; /* Controls the thickness of the border */
+  background: conic-gradient(
+    from var(--angle, 0deg),
+    #ff0080,
+    #ff8c00,
+    #ffd500,
+    #00ff80,
+    #0080ff,
+    #8000ff,
+    #ff0080
+  );
+  mask: 
+    linear-gradient(black 0 0) content-box,
+    linear-gradient(black 0 0);
+  mask-composite: xor;
+  -webkit-mask-composite: xor;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  animation: rainbow-spin 3s linear infinite;
+}
+
+.rainbow-hover:hover::before {
+  opacity: 1;
+}
+
+@keyframes rainbow-spin {
+  0% {
+    --angle: 0deg;
+  }
+  100% {
+    --angle: 360deg;
+  }
+}
+
+/* Enhanced rectangular rainbow border with smooth color movement */
+.rainbow-hover-alt {
+  position: relative;
+  isolation: isolate;
+  --rect-angle: 0deg;
+}
+
+.rainbow-hover-alt::before {
+  content: '';
+  position: absolute;
+  inset: -2px; /* Negative inset creates the border effect */
+  border-radius: inherit;
+  background: conic-gradient(
+    from var(--rect-angle),
+    #ff0080,
+    #ff8c00,
+    #ffd500,
+    #00ff80,
+    #0080ff,
+    #8000ff,
+    #ff0080
+  );
+  z-index: -2;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  animation: rainbow-rect-rotate 3s linear infinite;
+}
+
+.rainbow-hover-alt::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: inherit;
+  border-radius: inherit;
+  z-index: -1;
+}
+
+.rainbow-hover-alt:hover::before {
+  opacity: 1;
+}
+
+@keyframes rainbow-rect-rotate {
+  0% {
+    --rect-angle: 0deg;
+  }
+  100% {
+    --rect-angle: 360deg;
+  }
+}
+
+/* Enable CSS custom property animation for rectangular angle */
+@property --rect-angle {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
