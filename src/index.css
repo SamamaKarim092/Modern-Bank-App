@@ -137,3 +137,40 @@
     filter: blur(750px);
   }
 }
+
+@layer utilities {
+  /* rainbow border */
+  .bg-rainbow {
+    --angle: 0deg;
+    background: conic-gradient(
+      from var(--angle),
+      #ff0080,
+      #ff8c00,
+      #ffd500,
+      #00ff80,
+      #0080ff,
+      #8000ff,
+      #ff0080
+    );
+    mask: radial-gradient(
+      circle at center,
+      transparent 68%,
+      black 69%,
+      black 100%
+    );
+    animation: spin 3s linear infinite;
+  }
+
+  @keyframes spin {
+    to {
+      --angle: 360deg;
+    }
+  }
+
+  /* enable CSS custom property animation for the angle */
+  @property --angle {
+    syntax: "<angle>";
+    inherits: false;
+    initial-value: 0deg;
+  }
+}
