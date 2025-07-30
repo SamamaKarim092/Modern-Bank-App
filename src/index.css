@@ -560,3 +560,24 @@
   }
 }
 
+.button-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-center {
+  position: relative;
+  width: 180px;
+  height: 60px;
+}
+
+.button-center button:hover {
+  background: rgba(79, 149, 218, 0.2);
+  transition: all 1s ease-in-out;
+}
+
+.button-center button:hover .hl-line {
+  stroke-dashoffset: -480;
+}
