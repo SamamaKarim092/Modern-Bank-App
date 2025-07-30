@@ -14,20 +14,15 @@ const Navbar = () => {
       {/* Desktop Navigation */}
       <div className="sm:flex hidden flex-1 justify-end items-center">
         <ul className="list-none flex justify-end items-center text-white">
-          {navLinks.map((nav, index) => (
+          {navLinks.map((nav) => (
             <li
               key={nav.id}
-              className={`font-poppins font-normal cursor-pointer text-[16px] ${
+              className={`glow-on-hover font-poppins font-normal cursor-pointer text-[16px] ${
                 active === nav.title ? "text-white" : "text-dimWhite"
-              } ${index === navLinks.length - 1 ? "mr-0" : "mr-10"}`}
+              } mr-10`}
               onClick={() => setActive(nav.title)}
             >
-              <a 
-                href={`#${nav.id}`}
-                className="rainbow-hover px-4 py-2 rounded-lg transition-all duration-200 inline-block"
-              >
-                {nav.title}
-              </a>
+              <a href={`#${nav.id}`}>{nav.title}</a>
             </li>
           ))}
         </ul>
@@ -51,17 +46,12 @@ const Navbar = () => {
             {navLinks.map((nav, index) => (
               <li
                 key={nav.id}
-                className={`font-poppins font-medium cursor-pointer text-[16px] ${
+                className={`glow-on-hover font-poppins font-normal cursor-pointer text-[16px] ${
                   active === nav.title ? "text-white" : "text-dimWhite"
-                } ${index === navLinks.length - 1 ? "mb-0" : "mb-4"}`}
+                } mb-4`}
                 onClick={() => setActive(nav.title)}
               >
-                <a 
-                  href={`#${nav.id}`}
-                  className="rainbow-hover px-4 py-2 rounded-lg block transition-all duration-200"
-                >
-                  {nav.title}
-                </a>
+                <a href={`#${nav.id}`}>{nav.title}</a>
               </li>
             ))}
           </ul>
