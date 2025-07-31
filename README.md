@@ -1,12 +1,46 @@
-# React + Vite
+# 💰 Modern Bank App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A sleek, modern UI banking website built with **React** ⚛️ and animated beautifully using **Framer Motion** 🎞️. This project is fully responsive and offers a smooth user experience for showcasing financial services online.
 
-Currently, two official plugins are available:
+🔗 **Live Demo**:  
+👉 [View it here](https://modern-bank-app-pi-two.vercel.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## Expanding the ESLint configuration
+- ⚛️ Built with **React**
+- 💅 Clean and **modern UI design**
+- 🎞️ **Framer Motion** for smooth animations
+- 📱 **Responsive** layout for all devices
+- 🎨 Custom reusable components
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📁 Folder Structure
+/src
+/assets # Images and icons
+/components # Reusable React components
+/constants # Static data for nav and features
+/styles # Tailwind & custom styles
+App.jsx # Main App component
+main.jsx # React DOM render entry
+
+
+## 📦 Tech Stack
+
+- **React**
+- **Tailwind CSS**
+- **Framer Motion**
+- **Vite** for blazing fast build
+
+## 🧑‍💻 Getting Started
+
+To run the project locally:
+
+```bash
+git clone https://github.com/yourusername/modern-bank-app.git
+cd modern-bank-app
+npm install
+npm run dev
+
+
+---
+
+Let me know if you want it to include images, contribution instructions, or deployment steps.
