@@ -4,13 +4,15 @@ import { footerLinks, socialMedia } from "../constants";
 import { motion } from "framer-motion";
 
 const Footer = () => (
-  <section className={`${styles.flexCenter} ${styles.paddingY} flex-col relative overflow-hidden`}>
+  <section
+    className={`${styles.flexCenter} ${styles.paddingY} flex-col relative overflow-hidden`}
+  >
     {/* Animated Background Elements */}
     <div className="absolute inset-0 opacity-5">
       <div className="absolute top-0 left-1/4 w-64 h-64 bg-blue-500 rounded-full blur-3xl animate-pulse" />
       <div
         className="absolute bottom-0 right-1/4 w-48 h-48 bg-purple-500 rounded-full blur-3xl animate-pulse"
-        style={{ animationDelay: '2s' }}
+        style={{ animationDelay: "2s" }}
       />
     </div>
 
@@ -87,7 +89,10 @@ const Footer = () => (
                   initial={{ opacity: 0, x: -10 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.3, delay: 0.6 + index * 0.1 + linkIndex * 0.05 }}
+                  transition={{
+                    duration: 0.3,
+                    delay: 0.6 + index * 0.1 + linkIndex * 0.05,
+                  }}
                   whileHover={{ x: 5 }}
                   transitionHover={{ duration: 0.2 }}
                 >
@@ -115,7 +120,7 @@ const Footer = () => (
         viewport={{ once: true }}
         transition={{ duration: 0.6, delay: 1 }}
       >
-        Copyright Ⓒ 2022 HooBank. All Rights Reserved.
+        Copyright Ⓒ 2025 HooBank. All Rights Reserved.
       </motion.p>
 
       <motion.div
